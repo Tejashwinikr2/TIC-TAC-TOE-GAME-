@@ -38,7 +38,7 @@ JavaScript – for game logic and interactivity
 
 How to Run Locally
 
-1. Download the Zipfile  
+1. clone the repository 
 
 
 2. Navigate to the project folder:
@@ -60,13 +60,6 @@ tic-tac-toe/
 ├── index.html        # Main HTML file
 ├── style.css         # CSS styling
 └── script.js         # JavaScript logic
-
-
----
-
-Screenshots
-
-(You can add screenshots here to show how the game looks)
 
 
 ---
