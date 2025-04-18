@@ -1,0 +1,172 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: url('background.jpeg');
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* Reset and box-sizing for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #ffff;
+}
+
+h1 {
+  margin-top: 30px;
+}
+
+/* Game container styling */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Board grid styling */
+.board {
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Cell styling */
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(250, 240, 247, 0.884);
+  border: rgb(196, 17, 136);
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background-color: #720541;
+}
+
+/* Game status text */
+#status {
+  font-size: 1.2em;
+  margin: 10px;
+}
+
+/* Reset button */
+#reset {
+  margin-top: 20;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #13020d;
+  color: rgb(172, 19, 192);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#reset:hover {
+  background-color: #e611b7;
+}
+
+/* Generic button styling */
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: rgb(39, 9, 110);
+  color: rgb(85, 8, 62);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 1rcm rgba(37, 33, 33, 0.1);
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: rgba(64, 2, 70, 0.781);
+}
+
+/* Move list styling */
+#moves {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#moveList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#moveList li {
+  font-size: 18px;
+  margin: 5px;
+}
+
+/* Winner blast effect */
+.blast-hidden {
+  display: none;
+}
+
+#blast {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #35031a, #a00744);
+  color: white;
+  font-size: 3rem;
+  padding: 30px 50px;
+  border-radius: 20px;
+  z-index: 9999;
+  animation: blast-animation 1s ease-out forwards;
+}
+
+/* Responsive design for container */
+.container {
+  width: 80%;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Keyframe animation for the blast */
+@keyframes blast-animation {
+  0% {
+      transform: translate(-50%, -50%) scale(0.1);
+      opacity: 0;
+  }
+  50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+  }
+}

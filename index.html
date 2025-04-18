@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsiveness -->
+    <title>Tic Tac Toe</title> <!-- Page title -->
+    <link rel="stylesheet" href="style.css"> <!-- Linking external CSS -->
+</head>
+<body>
+    <h1>Tic Tac Toe</h1> <!-- Heading -->
+
+    <!-- Game board container -->
+    <div class="game-container">
+        <div class="board">
+            <!-- 9 cells for Tic Tac Toe -->
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+    </div>
+
+    <!-- Background and winner blast message -->
+    <div id="background"></div>
+    <div id="blast" class="blast-hidden">Winner!</div>
+
+    <!-- Game status and move history -->
+    <h2 id="status">Player X's turn</h2>
+    <h3 id="moves">Moves:</h3>
+    <ul id="moveList"></ul>
+
+    <!-- Reset button -->
+    <button id="reset">Restart Game</button>
+
+    <!-- Sound Effects -->
+    <audio id="moveSound" src="move.mp3"></audio>
+    <audio id="winSound" src="winner.mp3"></audio>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
